@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Contact.scss";
-import { WhatsApp, Facebook, X, Instagram, GitHub, LinkedIn } from '@mui/icons-material';
+import {  X, Instagram, GitHub, LinkedIn } from '@mui/icons-material';
 
 const Contact = () => {
   return (

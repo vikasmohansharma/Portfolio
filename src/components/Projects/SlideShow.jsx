@@ -30,7 +30,7 @@ const SlideShow = ({ slides }) => {
       {slides.map((slide, index) => {
         return (
           <div className={index === current ? 'slide active' : 'slide'} key={index}>
-            {index === current && (<img src={slide.image} alt='Image Blocked' className='image' />)} 
+            {index === current && (<img src={slide.image}  className='image' />)} 
             {index === current && (<p className='description'>{slide.description}</p>)}
           </div>
         );

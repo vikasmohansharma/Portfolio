@@ -10,7 +10,7 @@
   padding-top: 0;
   height: 80px;
   outline: 0;
-  width: 100vw;
+  width: 100%;
   position: fixed;
   top: 0;
   z-index: 2;
@@ -71,9 +71,17 @@ img {
 
 @media (max-width: 821px) {
   .navbar {
-    width: 100vw;
+    width: 100%;
     
   }
+}
+
+@media (max-width: 821px) {
+  .navbar {
+    width: 100%;
+    
+  }
+  
   .navbarMenu {
     display: none;
     flex-direction: column;

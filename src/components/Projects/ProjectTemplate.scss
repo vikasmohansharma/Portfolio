@@ -100,3 +100,10 @@ p {
   }
 }
 
+
+@media (max-width: 667px) {
+  .projectitem {
+    width: 350px;
+    height: auto;
+  }
+}

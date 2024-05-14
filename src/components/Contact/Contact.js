@@ -16,7 +16,7 @@ const Contact = () => {
         <GitHub className="icon" /></a>
         <a target="blank" href="https://www.linkedin.com/in/vikas-sharma-b86968286/"><LinkedIn className="icon" /></a>
         <a target="blank"href="https://twitter.com/vikasaryavart"><X className="icon" /></a>
-        <a target="blank"href="#"><Instagram className="icon" /></a>
+        <a target="blank"href="https://twitter.com/vikasaryavart"><Instagram className="icon" /></a>
       </div>
     </div>
    

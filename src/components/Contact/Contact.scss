@@ -1,0 +1,81 @@
+// Contact.scss
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 0;
+  text-align: center;
+  margin-top: 70px;
+
+  .intro {  
+    max-width: 600px;
+    p {
+      font-size: 28px;
+      line-height: 1.5;
+    }
+  }
+
+  h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .contactme {
+    margin-top:0;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+    font-size: 2rem;
+    color: #333; // Set your desired icon color  
+
+    a {
+      text-decoration: none;
+      border-radius: 50%;
+    }
+
+    .icon {
+      cursor: pointer; // Optional: add cursor pointer for better UX
+      transition: transform 0.3s ease; // Optional: add hover effect
+      &:hover {
+        transform: scale(1.2); // Optional: increase icon size on hover
+        box-shadow: 0 0 10px orange; 
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 821px) {
+  .contact {
+    margin-top: 0;
+    justify-content: flex-start; // Align items to the start
+    gap: 20px; // Add some gap between items
+    height: auto;
+
+    .intro {
+      margin-top: 20px; // Add some top margin to push it down
+    }
+
+    .contactme {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 48px;
+    }
+
+    .social-icons {
+      font-size: 120px;
+      margin-top: 0;
+      justify-content: center;
+      align-items: center;
+
+      .icon {
+        bottom: 0;
+        flex-basis: 10px;
+      }
+    }
+  }
+}

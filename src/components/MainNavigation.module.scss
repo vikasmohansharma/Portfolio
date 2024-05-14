@@ -1,0 +1,164 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Changed to space-between */
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  margin-top: 0;
+  padding-top: 0;
+  height: 80px;
+  outline: 0;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.navbarLogo {
+  font-size: 1.5rem;
+  /* Removed position: absolute */
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbarMenu {
+  display: flex;
+  align-items: center;
+}
+
+.navbarMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  margin-left: auto;
+}
+
+.navbarMenu ul li {
+  margin: 0 1rem;
+  margin-right: 48px;
+  font-size: 20px;
+}
+
+.navbarMenu ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbarMenu ul li a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+.navbarMenu ul li a:active {
+  color: red;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 821px) {
+  .navbar {
+    width: 100vw;
+    
+  }
+  .navbarMenu {
+    display: none;
+    flex-direction: column;
+    text-align:center;
+
+    position: fixed; /* Change position to fixed */
+    top: 80px; /* Adjust top position */
+    right: 0;
+    width: 100%;
+    text-align:center;
+    background-color: rgba(0, 0, 0);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    max-height: calc(
+      100vh - 80px
+    ); /* Set max-height based on viewport height minus navbar height */
+  }
+
+  .navbarMenu.open {
+    display: flex;
+    text-align:center;
+  }
+
+  .navbarLogo {
+    font-size: 1.5rem;
+
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .navbarMenu ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align:center;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .navbarMenu ul li {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .navbarMenu ul li:hover {
+    background-color: blue;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: flex-end; /* Align hamburger icon to the right */
+    margin-right: 30px;
+  }
+
+  .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+  }
+
+  .icon {
+    transition: transform 1.5s linear;
+  }
+
+  /* Add CSS for sticky behavior */
+  body {
+    padding-top: 160px; /* Adjust body padding to account for fixed navbar */
+  }
+}
+
+
+ .light {
+  background-color: white;
+  color: black;
+}
+ .dark {
+  background-color: black;
+  color: white;
+}

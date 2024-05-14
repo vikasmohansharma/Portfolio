@@ -1,0 +1,127 @@
+.home {
+  margin-top: 100px;
+  padding-top: 0;
+  outline: 0;
+  background: transparent;
+  justify-content: space-between;
+
+  .home_section1 {
+    display: flex;
+    width: 100%;
+    background: transparent;
+
+    .part1 {
+      flex-grow: 0;
+      width: 60%;  
+      padding: 10px;
+      font-size:40px;
+      text-align: center;
+    }
+    .part2 {
+      flex-grow: 0;
+      width: 40%; 
+      padding: 10px;
+ 
+      img {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .home_section2 {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: auto;
+    background: transparent;
+    text-align: justify;
+    justify-content: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 25px;
+
+    h4 {
+      font-size: 25px;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      text-align: justify;
+      font-family:sans-serif;
+
+      .passion {
+        font-weight: 700;
+        color: #ff6f61; /* Red color */
+      }
+  
+      .innovating {
+        font-style: italic;
+        color: #4caf50; /* Green color */
+      }
+  
+      .cutting-edge {
+        font-weight: 700;
+        color: #007bff; /* Blue color */
+      }
+    }
+
+  }
+  .home_section3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    text-align:center;
+    font-size: 30px;
+
+    .icons {
+      display: flex;
+      gap : 10px;
+      justify-content: center;
+      background: transparent;
+      margin-right: 10px;
+      margin-bottom: 35px;
+
+      
+      
+
+      button {
+        border-radius: 50%;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        
+   
+      }
+      button:hover {
+        box-shadow: 0px -5px 20px rgba(255, 255, 255, 0.5); 
+        background: orange;
+      }
+    }
+
+  
+  }
+
+
+  // Media query for smaller devices
+  @media screen and (max-width: 821px) {
+    .home_section1 {
+      flex-direction: column;
+      .part1,
+      .part2 {
+        width: 100%; // Full width for smaller devices
+
+
+        
+    .designations {
+      font-size: 35px;
+    }
+
+      }
+    }
+  }
+}
+

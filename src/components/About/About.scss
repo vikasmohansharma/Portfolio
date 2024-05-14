@@ -1,0 +1,204 @@
+.about {
+  padding: 20px;
+  padding: 20px;
+  margin-top: 80px;
+  overflow-x: hidden;
+
+
+  .avatar {
+    text-align: center;
+    width: 100%;
+    position: relative;
+  
+    img {
+      width: 30%;
+      height: 30%;
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px red;
+    }
+  
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      background: transparent; /* Black see-through */
+      color: #f1f1f1;
+      width: 100%;
+      transition: 0.5s ease;
+      opacity: 0;
+      color: white;
+      font-size: 20px;
+      padding: 20px;
+      text-align: center;
+  
+      button {
+        background-color: red;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+      button:hover {
+        background-color: blue;
+      }
+    }
+  
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .avatar:hover .overlay {
+    opacity: 1;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .about_part1 {
+    display: flex;
+    text-align: justify;
+    padding: 30px;
+    outline: 0;
+    margin: 0;
+
+    h2 {
+      margin-top: 30px;
+    }
+
+    .flex-item {
+      font-size: 30px;
+
+      ul {
+        list-style-type: none;
+
+        li {
+          font-family: monospace;
+
+        }
+
+        li::before {
+          content: "\1F3C6";
+          display: inline-block;
+          width: 1em;
+          margin-right: 0.5em;
+          margin-left: -1em;
+        }
+      }
+    }
+  }
+
+  .proff, .tool {
+    text-align: center;
+    font-size: 70px;
+  }
+  .about_part2,
+  .about_part3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+
+    .about_part2_3flexitem {
+      border: 2px solid black;
+      width: 280px;
+      height: 220px;
+      box-shadow: 0px 0px 2px white;
+    }
+
+    @keyframes skillshover {
+      0% {
+        box-shadow: 0px 0px 10px blue;
+      }
+      100% {
+        box-shadow: 0px 0px 10px red;
+      }
+    }
+
+    .about_part2_3flexitem:hover {
+      width: 280px;
+      height: 220px;
+      box-shadow: 0px 0px 10px red;
+      animation: skillshover 1s ease-in;
+    }
+  }
+
+  .image-container {
+    position: relative; /* Ensure the overlay is positioned relative to this container */
+    display: inline-block;
+  }
+
+  .skillsoverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.5);
+    font-weight: bolder;
+    font-size: 36px;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text within the overlay */
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    
+  }
+
+ 
+  
+  
+  
+  .image-container:hover .skillsoverlay {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .about {
+    .know {
+      font-size: 45px !important;
+      margin-top: 0;
+
+    }
+
+    .about_part1  {
+      
+
+      .flex-item {
+        font-size: 20px;
+      }
+ 
+
+    }
+  }
+
+ .avatar {
+  pointer-events: none;
+ }
+ 
+ .about_part2_3flexitem {
+  width: 60px;
+  height: 60px;
+ }
+
+
+ .proff, .tool {
+  font-size: 40px !important;
+}
+
+.about_part2_3flexitem {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.skillsoverlay { 
+  font-size: 20px !important;
+}
+}

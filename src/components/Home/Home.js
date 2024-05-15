@@ -108,7 +108,12 @@ function Home() {
             >
               <LinkedInIcon style={{ color: "red" }} />
             </button>
-            <button onClick="">
+            <button onClick={() =>
+                window.open(
+                  "https://www.instagram.com/real.vikassharma1996/?igsh=MXU4YWxmbXowaDg5NQ%3D%3D",
+                  "_blank"
+                )
+              }>
               <InstagramIcon style={{ color: "red" }} />
             </button>
           </div>

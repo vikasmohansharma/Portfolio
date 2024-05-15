@@ -30,7 +30,7 @@ function About() {
       <button  onClick={() => window.open("https://www.linkedin.com/in/vikas-sharma-b86968286/")}>
         <LinkedInIcon  />
       </button>
-      <button  onClick="">
+      <button  onClick={() => window.open("https://www.instagram.com/real.vikassharma1996/?igsh=MXU4YWxmbXowaDg5NQ%3D%3D")}>
         <InstagramIcon  />
       </button></div></div>
 

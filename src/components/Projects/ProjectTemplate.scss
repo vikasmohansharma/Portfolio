@@ -92,6 +92,10 @@ p {
   background-color: orangered;
 }
 
+.projectdetails {
+  border: 1px solid green;
+}
+
 //Transition only on bigger devices
 @media (min-width: 768px) {
   .projectitem:hover {
@@ -100,6 +104,7 @@ p {
     width: 530px;
     height: 640px;
   }
+
 }
 
 
@@ -127,6 +132,7 @@ p {
 
   .tablet {
     margin: 10px;
-    z-index: -1;
   }
+
+
 }

@@ -92,6 +92,7 @@ p {
   background-color: orangered;
 }
 
+//Transition only on bigger devices
 @media (min-width: 768px) {
   .projectitem:hover {
     transition: box-shadow,width 0.5s ease-in;
@@ -114,5 +115,18 @@ p {
   .projectitem {
     width: 350px;
     height: auto;
+  }
+}
+
+//stylinng for mobile devices
+@media (max-width: 500px) {
+  .projectitem {
+    width: 300px;
+    height: auto;
+  }
+
+  .tablet {
+    margin: 10px;
+    z-index: -1;
   }
 }

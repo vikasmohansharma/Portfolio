@@ -10,7 +10,7 @@ const ProjectTemplate = ({projectslides, projectCaption, projectDescription, pro
       <SlideShow slides={projectslides}/> 
     </div>
   </div>
-  <h2 style={{ textAlign: "right" }}>{projectCaption}</h2>
+  <h2 style={{ textAlign: "center" }}>{projectCaption}</h2>
   <p>
 {projectDescription}
 <div className='projectbuttons'>{projectActions}</div>

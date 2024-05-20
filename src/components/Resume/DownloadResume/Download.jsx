@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import axios from 'axios';
 
-const DownloadButton = ({ file }) => {
+const DownloadButton = () => {
   const buttonStyle = {
     padding: '10px 20px',
     fontSize: '16px',
@@ -12,8 +12,9 @@ const DownloadButton = ({ file }) => {
     transition: 'background-color 0.3s',
     marginRight: '10px', // Add margin to create space between buttons
   };
-// eslint-disable-next-line
-  const [filename, setFilename] = useState('Vikas_Sharma_Resume.pdf'); // Default filename
+
+  const filename = 'Vikas_Sharma_Resume.pdf'; // Hardcoded filename
+  const fileUrl = 'resume.pdf'; // Hardcoded file URL
 
   const downloadFile = async () => {
     // Display confirmation dialog using browser's default dialog
@@ -21,10 +22,8 @@ const DownloadButton = ({ file }) => {
 
     // Proceed with download if confirmed
     if (isConfirmed) {
-      // Proceed with download logic
       try {
-        const response = await axios.get(file, { responseType: 'blob' });
-        console.log(response);
+        const response = await axios.get(fileUrl, { responseType: 'blob' });
 
         // Create a blob URL from the response data
         const url = window.URL.createObjectURL(new Blob([response.data]));
@@ -32,12 +31,15 @@ const DownloadButton = ({ file }) => {
         // Create a link element and set its attributes
         const link = document.createElement('a');
         link.href = url;
-        link.setAttribute('download', filename); // Use the user-defined filename
+        link.setAttribute('download', filename);
 
         // Append the link to the DOM, click it, and remove it
         document.body.appendChild(link);
         link.click();
-        document.body.removeChild(link);
+
+        // Clean up the URL object after the download
+        link.parentNode.removeChild(link);
+        window.URL.revokeObjectURL(url);
       } catch (error) {
         console.error('Error downloading the file:', error);
       }

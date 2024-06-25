@@ -3,3 +3,9 @@
         background-color: red;
     }
 }
+.zoomed {
+    transform: scale(1.5); /* Adjust the scale value as needed */
+    transform-origin: top left; /* Adjust the origin to control the zoom's focus point */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+  }
+  

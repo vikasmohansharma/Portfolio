@@ -4,9 +4,9 @@ import SlideShow from  './SlideShow';
 
 const ProjectTemplate = ({projectslides, projectCaption, projectDescription, projectActions}) => {
   return (        <div className="projectitem">
-  <div class="tablet ">
+  <div className="tablet ">
   
-    <div class="screen">
+    <div className="screen">
       <SlideShow slides={projectslides}/> 
     </div>
   </div>
